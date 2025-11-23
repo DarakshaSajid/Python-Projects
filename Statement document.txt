@@ -1,0 +1,123 @@
+PROJECT REPORT
+
+       NAME: DARAKSHA SAJID
+COURSE: INTEGRATED MTECH ARTIFICIAL INTELLIGENCE
+REGISTRATION NO: 25MIM10054
+SUBJECT: INTRODUCTION TO PROBLEM SOLVING AND PROGRAMMING
+FACULTY: DR. MONICA VYAS
+
+
+
+PROBLEM STATEMENT
+
+Traditional library book management is still done by hand in the majority of educational institutions, which frequently results in problems like tracking available books, incorrect record issuance and return, book misplacement, and delays brought on by human error. While librarians struggle to keep accurate records of due dates and fines, students frequently struggle to determine whether a specific book is available, already issued, or reserved.
+A straightforward, automated, and user-friendly system that can optimize library operations, reduce manual labour, and give users accurate real-time information is obviously needed.
+The goal of this project is to create a structured, interactive console-based application that enables users to view available books, borrow books, return books, check due dates and fines, and effectively track book status. The objectives of this system are to increase operational effectiveness, decrease errors, and enhance the administrative and student experience.
+
+SCOPE OF THE PROJECT
+The goal of the Library Book Allocation System is to automate the fundamental tasks associated with library book management in educational institutions.
+
+Viewing available books, borrowing books, returning books, and checking status—including due dates and fine calculations—are all possible with this system.
+
+Through a straightforward menu-driven console interface, it is intended to be used by both library employees and students, guaranteeing ease of use without the need for technical knowledge.
+
+By keeping precise and up-to-date records of book availability and borrowing status, the system lowers the possibility of human error.
+
+Multiple users can be supported sequentially by the project, enabling repeated operations until the user logs out.
+The system's structure and modular design offer a solid basis for future additions of sophisticated features like digital records, multi-branch library support, search capabilities, and authentication.
+
+Database storage, graphical user interfaces, and online access are not currently included in the project's scope; however, it is designed so that these improvements can be readily incorporated in the upcoming version.
+
+Important software development techniques like modular design, error handling, validation procedures, and realistic workflow simulation are all demonstrated in this project.
+
+TARGET USERS
+1.Pupils
+
+primary book borrowers and returners.
+
+able to track book status, view available books, verify due dates, and comprehend fines.
+
+enables quick access to library resources without the need for manual registration or standing in long lines.
+
+
+2.Librarians and Library Personnel
+
+Oversee the issuance and return of books and keep track of borrowing information.
+
+Reduce the workload brought on by manual tracking by using the system to update availability status.
+
+helps guarantee accuracy and keeps books from being mismanaged or duplicated.
+
+3.Teachers
+
+can verify if research materials and reference books are available.
+
+helps teachers suggest books to students based on what is available.
+
+
+Academic Establishments and Management of Schools and Colleges
+
+can use insights to keep inventory organized, monitor usage trends, and plan library expansion.
+
+advantageous for automation projects and enhancing the way students access resources.
+
+
+4.Students Learning Programming and Novices in Software Development
+
+A practical illustration of modular programming, problem-solving, and system design.
+
+HIGH LEVEL FEATURES
+1.Menu-Driven Interactive Interface
+
+Users can view, borrow, return, and check the status of books using an easy-to-use console menu.
+
+
+2.View the Books That Are Available
+
+shows an organized list of books along with the author, title, book ID, and copies that are available.
+
+
+3.Features for Borrowing Books
+
+enables users to check out books according to availability.
+
+automatically verifies allocation and sets a deadline.
+Features for Returning Books
+
+allows users to return books they have previously checked out.
+
+updates the availability of books and determines the appropriate fines according to the delay.
+
+
+4.Exact Calculation
+
+uses basic manual logic to compute the late fee based on the number of days past due.
+
+
+5.Check the Status of Your Book
+
+gives up-to-date details on the books that have been checked out and the copies that are still available.
+
+6.Validation of Input and Error Management
+
+gracefully responds to requests for unavailable books, invalid entries, and incorrect book IDs.
+
+
+7.System Architecture in Modules
+
+To improve maintainability and scalability, separate modules are used for checking status, viewing books, borrowing, and returning.
+
+
+8.Human-Friendly User Communication
+
+To enhance the user experience, system messages are made to be straightforward, courteous, and interesting.
+
+
+9.Scalability for Upcoming Improvements
+
+Advanced features like search, reservations, authentication, graphical user interfaces, and database integration can be added using architecture.
+
+
+
+
+
