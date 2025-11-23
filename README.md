@@ -1,0 +1,71 @@
+PROJECT :
+LIBRARY BOOK ALLOCATION SYSTEM 
+
+An overview of the project
+
+A console-based program called the Library Book Allocation System was created to digitally handle key library operations like viewing available books, giving books to patrons, returning books, computing fines, and verifying current status. Without using physical registers or manual tracking, this system aims to automate manual library operations, lower errors, increase efficiency, and give students rapid access to book information. To keep the design straightforward, well-organized, and scalable for upcoming improvements, the system employs a modular structure.
+
+Features
+
+Easy navigation with a menu-driven user interface
+
+View the list of books that are available, including the ID, title, author, and stock count.
+
+Check the availability of books and assign due dates before borrowing them.
+
+Update availability and return books
+
+Exact computation for late returns
+
+Verify the current status of the books that are available and borrowed.
+
+Verifies erroneous data and stops improper actions
+
+Interaction messages that are friendly to people
+
+Modular code structure for scalability and maintainability
+
+
+Technologies and Tools Employed
+
+Python is the programming language.
+
+Development Environment: Any IDE or text editor (IDLE, PyCharm, VS Code, etc.)
+
+Type of System: Console-based program
+
+Data Management: dictionaries and lists
+
+
+(To keep the project straightforward and instructive, no external databases or libraries are used.)
+
+How to Install and Run the Project
+
+1. If Python isn't already installed, install it on your computer.
+
+
+2. Make a folder and store each project module within it.
+
+
+3. Use the terminal or Visual Studio Code to open the folder.
+
+
+4. Use the following command to launch the main program file:
+
+main.py in Python
+
+
+5. To carry out library operations, select options from the menu:
+
+View the books
+
+Take out a book
+
+Return the book
+
+Verify the status
+
+Leave
+
+
+
