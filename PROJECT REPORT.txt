@@ -1,0 +1,458 @@
+
+PROJECT REPORT
+
+       NAME: DARAKSHA SAJID
+COURSE: INTEGRATED MTECH ARTIFICIAL INTELLIGENCE
+REGISTRATION NO: 25MIM10054
+SUBJECT: INTRODUCTION TO PROBLEM SOLVING AND PROGRAMMING
+FACULTY: DR. MONICA VYAS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTRODUCTION
+This system is designed in order to simplify the process of issuing, returning and tracking books inside a library. The name of the system is “THE LIBRARY BOOK ALLOCATION SYSTEM”. This is a digital alternative to manual book management. It focuses on enabling users to view available books, borrowed books, return them and also checks the due dates and fines. It also aims to reduce workload for librarians and improve accessibility and transparency for the readers
+
+
+PROBLEM STATEMENT
+When we look into the traditional library management, we realize that it relies  heavily on manua; paperwork. So, this leads to inefficiency, data loss, difficulty in tracking due records and delays in book insurance. When the structured system is absent, it causes confusion and mismanagement. To overcome these issues, we need a computerized system that maintains records accurately and supports users with real-time book availability updates.
+
+FUNCTIONAL REQUIREMENTS 
+* This system should allow the users to view all the available.
+* It has to made in such a way that users should be able to borrow a book by providing their name and book ID.
+* It should even have a system of showing the due date after issuing the book on a specific date. The due date should be around 7days or 14days after the issuing date.
+* The code should also have a system in which the users will be able to return the borrowed books.
+* It has to be made in a way that it can compute late fines as well if the book is returned after the due date.
+* It should also have a system that will allow checking current borrowing status.
+
+NON-FUNCTIONAL REQUIREMENTS
+      
+* Usability: The console interface is straightforward and simple to use.
+
+* Reliability: Precise monitoring of user records and book availability.
+
+* Performance: Minimal processing time and fast response.
+
+* Scalability: The ability to add additional modules (search, login, reservations).
+
+* Maintainability: Easy updates are made possible by a modular code structure.
+
+
+SYSTEM ARCHITECHTURE
+1. In order to preserve responsibility separation and facilitate simple scalability, the system employs a modular layered architecture.
+
+2. The User Interface Layer, Application Logic Layer, and Data Layer are its three main layers.
+
+3. A console-based menu system is used by the User Interface Layer to manage user interaction.
+
+4. The essential tasks, including viewing books, borrowing books, returning books, computing due dates, and calculating fines, are carried out by the Application Logic Layer.
+
+5. The system is divided into distinct modules.
+
+Python lists and dictionaries are used by the Data Layer to maintain in-memory storage for books lists and borrowed records.
+
+The system simplifies due dates and fine calculations by using manual logic operations rather than external libraries.
+
+Function calls and shared data references allow all modules to communicate with one another, resulting in loose coupling and simple maintenance.
+
+The modular design makes it simple to add new features like database integration, reservation queues, and student login.
+
+The architecture can serve as a basis for a future graphical user interface (GUI) or cloud-based system because it is scalable and maintainable.
+
+Because the system doesn't need external storage, it can run quickly and use fewer resources.
+
+
+
+DESIGN DIAGRAMS 
+
+
+
+
+
+
+DESIGN DECISIONS AND RATIONALE 
+
+Justification: Enhances readability, streamlines debugging, and facilitates future feature expansion without interfering with other modules.
+
+
+Console-Based User Interface
+
+Instead of using a graphical user interface, interaction takes place through a text-based menu.
+
+Justification: Guarantees ease of use, quicker development, low system requirements, and simpler testing in educational settings.
+
+
+Utilizing Dictionaries and Lists to Store Data
+
+Python lists and dictionaries are used to store books and borrowed records in memory.
+
+Justification: For small-scale projects, it permits dynamic data handling and effective access without requiring databases or file systems.
+
+
+Manual Calculation of Due Date and Fine
+
+Instead of using date libraries, basic integer logic was used.
+
+Justification: Complies with project educational goals, avoids complexity, and eliminates reliance on imports.
+
+
+Transferring Shared Information Between Modules
+
+Data is stored in the main program and passed to modules as parameters.
+Justification: Promotes modular communication instead of global variables or external files and improves loose coupling.
+
+
+Human-Friendly Messages for Output
+
+The language is clear and courteous.
+
+Justification: Enhances user experience and offers genuine library-like interaction.
+
+
+Absence of Integration with External Storage
+
+decided against using file handling or databases.
+
+Justification: Without adding more complexity, concentrate on developing the fundamental logical functionality needed for a small academic project.
+
+
+Menu Navigation Based on Options
+
+The main program keeps showing options until the user quits.
+
+Justification: Prevents sudden program termination and guarantees efficient workflow.
+
+
+A Look at Expandability
+
+The system was built with room to add reservations, search capabilities, authentication, and a graphical user interface.
+
+Justification: If upgraded for large-scale project use, it supports long-term revision and scalability.
+
+
+IMPLEMENTATION DETAILS 
+
+Python is the programming language used.
+
+selected due to its strong support for modular programming, ease of reading, and simplicity.
+
+
+Implemented System Modules:
+
+1. Primary Module:
+
+serves as the program's command center.
+
+allows users to switch between various modules (View Books, Borrow, Return, Check Status, Exit) and displays the main menu.
+
+
+
+2. Module for Books:
+
+keeps information about the books that are available, including the title, author, total copies, and available copies.
+
+shows the availability status of every book that is currently in the library.
+
+Ten sample books are preloaded for demonstration.
+
+
+
+3. The Borrow Module
+
+lets a user enter their name and the desired book ID to check out a book.
+
+Verifies whether the book is available before approving the loan.
+
+reduces the number of copies that are available by one after they are borrowed.
+
+creates a deadline of seven
+4. Module for Return:
+
+manages the process of returning books.
+
+To indicate a return, it takes the user's name and book ID.
+
+increases the number of books that are available by one.
+
+determines the fine (if any) by counting the number of days after the due date.
+
+
+
+5. Module for Status:
+
+shows all of the books that users have checked out along with their due dates and fine status.
+
+serves as an ongoing loan log in real time.
+Method of Data Handling:
+
+maintains book and user borrowing data using lists and dictionaries.
+
+The system is lightweight and portable because it doesn't use a database or file storage.
+
+
+6. Management of Input/Output:
+
+input() prompts are used to handle user input.
+
+output presented in a format that is organized and readable by humans.
+
+
+7. Program Flow:
+The main menu is displayed upon execution.
+
+The user chooses a choice (e.g., View Books, Borrow Book).
+
+The matching module function runs based on the selection.
+
+Until the user decides to quit, the menu keeps repeating.
+8. Handling Errors:
+checks for unavailable books and invalid book IDs.
+stops incorrect returns and duplicate borrowing.
+9. Scalability
+It is simple to add more modules (like Search Book, Student Login, and Reservation) without requiring significant code changes.
+
+SCREENSHOTS
+
+
+TESTING APPROACH 
+Method of Testing Employed:
+
+Throughout the development process, manual testing was done to make sure every module operated correctly.
+
+
+Test Methodology:
+
+1. Testing units
+
+View Books, Borrow Book, Return Book, and Status Check were all tested separately.
+
+confirmed the proper operation of input handling and output responses.
+
+Edge cases like empty inputs and invalid book IDs were tested.
+
+
+
+2. Testing for Integration
+
+checked the status after borrowing a book to verify the system flow.
+
+To guarantee that the book count updates correctly, the interaction between the Borrow and Return modules was confirmed.
+
+Verified that the calculation of the due date and the fine rules applied uniformly to all modules.
+3. Testing for functionality
+
+Every functional requirement specified in the project specification has been tested.
+
+made sure that the availability of books decreases after they are issued and rises after they are returned.
+
+tested behavior when attempting to check out a book that isn't available.
+
+
+
+4. Negative Case and Boundary Testing
+
+taking out the final copy that is available.
+
+trying to return a book that was not borrowed.
+
+entering non-numeric or inaccurate book IDs.
+
+examining how the system behaves when fields are left blank.
+
+
+
+5. Testing User Interaction
+
+confirmed that menu navigation is easy to use and comprehend.
+
+made sure the user received clear messages and instructions for each action.
+6.Utilized TesteTest Data:
+
+Ten fictitious books are listed.
+
+Users in the sample are borrowing and returning items with different deadlines.
+
+
+Comparison of Expected and Actual Results:
+
+Every essential function complied with the intended system design and behaved as anticipated.
+
+
+Fixes for bugs:
+
+Logic was modified for precise computation.
+
+Checks were added to stop duplicate borrowing.
+
+enhanced notifications for incorrect inputs.
+
+
+Last Thoughts:
+
+Under the tested scenarios, the system is reliable, gracefully handles errors, and completes all tasks accurately.
+
+CHALLENGES FACED
+1.Organizing the system into distinct modules
+
+It was difficult at first to divide the project into separate modules for things like viewing books, borrowing, returning, and status checking.
+
+To guarantee that data could be shared between modules without the use of external files or global variables, careful planning was necessary.
+
+
+2.Preserving the consistency of data
+
+Multiple testing iterations were required to ensure that book availability updates accurately following borrow and return operations.
+
+Temporary inconsistencies that needed to be debugged were caused by incorrect book ID mapping or count adjustments.
+
+3.Efficient computation and due date reasoning without utilizing pre-installed date libraries
+
+Implementing due dates and fine features manually was challenging and took time to logically design because the project required avoiding imports to keep the program simple.
+
+
+4.Validating input and managing erroneous user entries
+
+Users frequently enter incorrect data, such as invalid book IDs or letters in place of numbers.
+
+It took more work to make sure the system guides the user correctly and responds gracefully.
+
+
+5.Creating a message flow that is human-centered
+
+Rewriting and improvement were necessary to produce output messages that were realistic and friendly rather than technical prompts.
+
+
+Ensuring seamless navigation for users
+
+Designing a menu that loops correctly and does not crash after wrong entry attempts needed multiple iterations.
+
+LEARNING AND KEY TAKEAWAYS
+1.The Value of Modular Programming
+
+Development and debugging were made easier by breaking the system up into distinct modules, such as viewing books, borrowing, returning, and checking status.
+
+learned how modularity improves program scalability, clarity, and ease of maintenance.
+
+
+2.Simulation of Real-World Systems
+
+comprehended and converted into programmable logic the workings of actual library workflows, including book listing, issuing, returning, due dates, and fines.
+
+
+3.Managing Data with Lists and Dictionaries
+
+learned how to process, store, and update data without the need for external databases.
+
+enhanced comprehension of using parameters rather than global variables to transfer shared data between modules.
+4.Manual Reasoning for Calculating Due Date and Fine
+
+learned how to implement time-based logic without the need for date libraries.
+
+learned how to use basic numerical logic to simplify complicated problems.
+
+
+5.Validation of User Input
+
+realized that in order to avoid program errors, it is critical to handle unexpected user inputs.
+
+learned how to craft concise feedback messages that effectively direct users.
+
+
+6.Improving the User Experience
+
+developed the ability to write responses that are human-friendly rather than machine-like in order to make the system realistic.
+
+FUTURE ENHANCEMENTS 
+1.System for User Login and Authentication
+
+Create distinct accounts with secure login and role-based permissions for librarians and students.
+
+
+2.System of Search and Filtering
+
+To facilitate book access, offer advanced search based on book title, author name, genre, publication year, or keywords.
+
+
+3.Feature for Book Reservations
+
+When all copies are distributed, let users reserve a book and be informed when it becomes available.
+
+
+4.Database Storage Integration
+
+For long-term and multi-user data storage, use MySQL, MongoDB, or SQLite instead of in-memory lists.
+ 
+6.Web and Mobile Interface
+
+Create a web or mobile application with real-time access rather than console input by utilizing frameworks like Flask, Django, or React.
+
+
+7.Calculating Fines and Due Dates Automatically Using the System Calendar
+
+For more precise fine management, use built-in libraries to automate date and time logic.
+
+
+8.System for Reminders and Notifications
+
+Notify users via email, SMS, or in-app about deadlines, penalties, and available reservations.
+
+
+9.Scanning Barcodes and QR Codes
+
+To cut down on human input and mistakes, allow scanning of student IDs and book codes.
+
+10.Integration of Digital Libraries
+
+Include the ability to download e-books, PDFs, and external academic repositories.
+
+
+11.Analytics & Reporting
+
+Make dashboards that monitor user borrowing history, most-borrowed books, and library usage trends.
+
+
+12.Support for Multiple Libraries
+
+Permit the system to oversee various branches connected to the same university network.
+
+
+13. Inventory Administration Panel
+
+Replace hard-coded book lists with the ability to add, remove, or update books dynamically.
+
+REFERENCES 
+• Python official documentation: https://docs.python.org
+• General concept of Hangman (classic word-guessing game)
+• Online Python tutorials (GeeksforGeeks, W3Schools, Programiz)
+• VITyarthi – Build Your Own Project Guidelines
+
+
+
+
+
