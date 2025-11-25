@@ -58,11 +58,11 @@ main.py in Python
 5. To carry out library operations, select options from the menu:
 
 View the books
-
+Enter the user name 
 Take out a book
-
-Return the book
-
+Issue the book
+Return the book till the due date 
+And also complete the payment of the fine if the book is returned late 
 Verify the status
 
 Leave
